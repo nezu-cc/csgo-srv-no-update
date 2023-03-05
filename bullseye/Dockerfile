@@ -8,7 +8,7 @@ LABEL maintainer="walentinlamonos@gmail.com"
 ENV STEAMAPPID 740
 ENV STEAMAPP csgo
 ENV STEAMAPPDIR "${HOMEDIR}/${STEAMAPP}-dedicated"
-ENV DLURL https://raw.githubusercontent.com/CM2Walki/CSGO
+ENV DLURL https://raw.githubusercontent.com/nezu-cc/csgo-srv-no-update
 
 COPY etc/entry.sh "${HOMEDIR}/entry.sh"
 COPY etc/csgo "/etc/csgo"
@@ -71,11 +71,3 @@ CMD ["bash", "entry.sh"]
 EXPOSE 27015/tcp \
 	27015/udp \
 	27020/udp
-
-FROM bullseye-base AS bullseye-metamod
-
-ENV METAMOD_VERSION 1.11
-
-FROM bullseye-metamod AS bullseye-sourcemod
-
-ENV SOURCEMOD_VERSION 1.11

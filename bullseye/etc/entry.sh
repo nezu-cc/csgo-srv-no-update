@@ -34,8 +34,7 @@ sv_password	+sv_password "${SRCDS_PW}"
 rcon_password	+rcon_password "${SRCDS_RCONPW}"
 EOM
 	# if autoexec is present, drop overwritten arguments here (example: SRCDS_PW & SRCDS_RCONPW)
-	bash "${STEAMAPPDIR}/srcds_run" -game "${STEAMAPP}" -console -autoupdate \
-				-steam_dir "${STEAMCMDDIR}" \
+	bash "${STEAMAPPDIR}/srcds_run" -game "${STEAMAPP}" -console \
 				-usercon \
 				+fps_max "${SRCDS_FPSMAX}" \
 				-tickrate "${SRCDS_TICKRATE}" \
@@ -59,8 +58,7 @@ EOM
 				"${ADDITIONAL_ARGS}"
 else
 	# If no autoexec is present, use all parameters
-	bash "${STEAMAPPDIR}/srcds_run" -game "${STEAMAPP}" -console -autoupdate \
-				-steam_dir "${STEAMCMDDIR}" \
+	bash "${STEAMAPPDIR}/srcds_run" -game "${STEAMAPP}" -console \
 				-usercon \
 				+fps_max "${SRCDS_FPSMAX}" \
 				-tickrate "${SRCDS_TICKRATE}" \

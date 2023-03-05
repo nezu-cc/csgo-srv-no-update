@@ -36,7 +36,6 @@ EOM
 	# if autoexec is present, drop overwritten arguments here (example: SRCDS_PW & SRCDS_RCONPW)
 	bash "${STEAMAPPDIR}/srcds_run" -game "${STEAMAPP}" -console -autoupdate \
 				-steam_dir "${STEAMCMDDIR}" \
-				-steamcmd_script "${HOMEDIR}/${STEAMAPP}_update.txt" \
 				-usercon \
 				+fps_max "${SRCDS_FPSMAX}" \
 				-tickrate "${SRCDS_TICKRATE}" \
@@ -62,7 +61,6 @@ else
 	# If no autoexec is present, use all parameters
 	bash "${STEAMAPPDIR}/srcds_run" -game "${STEAMAPP}" -console -autoupdate \
 				-steam_dir "${STEAMCMDDIR}" \
-				-steamcmd_script "${HOMEDIR}/${STEAMAPP}_update.txt" \
 				-usercon \
 				+fps_max "${SRCDS_FPSMAX}" \
 				-tickrate "${SRCDS_TICKRATE}" \
